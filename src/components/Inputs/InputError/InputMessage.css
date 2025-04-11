@@ -1,0 +1,27 @@
+.input__error{
+    text-transform: lowercase;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &.error{
+        background-color: var(--bg-red-200);
+    }
+    
+    &.warning{
+        background-color: var(--bg-golden-200);
+    }
+    
+    &.info{
+        background-color: var(--bg-sky-200);
+    }
+    
+}
