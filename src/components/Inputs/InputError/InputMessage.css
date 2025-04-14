@@ -1,5 +1,5 @@
 .input__error{
-    text-transform: lowercase;
+    text-transform: capitalize;
     font-size: 14px;
     width: 100%;
     text-align: center;

@@ -26,6 +26,7 @@ export const TextInputComponent = forwardRef<HTMLInputElement, FormInputProps>((
     onKeyDown,
     onBlur,
     inlineIcon = false,
+    type = 'text',
     children,
     ...rest
 }, ref) => {
@@ -39,7 +40,7 @@ export const TextInputComponent = forwardRef<HTMLInputElement, FormInputProps>((
                     ref={ref}
                     id={id}
                     name={name}
-                    type="text"
+                    type={type}
                     value={value}
                     defaultValue={defaultValue ?? ''}
                     readOnly={!editable}

@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 
 type AuthFormValues = {
     email: string
+    password: string
 }
 
 export function useAuthHookForm() {

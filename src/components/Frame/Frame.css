@@ -3,10 +3,10 @@
     height: 45%;
 
     min-width: 200px;
-    min-height: 350px;
+    min-height: 480px;
 
     max-width: 600px;
-    max-height: 500px;
+    max-height: 550px;
 
     display: flex;
     flex-direction: column;

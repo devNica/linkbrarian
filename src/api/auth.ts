@@ -4,6 +4,7 @@ import { UserLogged } from "../types/auth"
 
 interface AuthSigning {
     email: string | null
+    password: string
 }
 
 export const userAuthAPI = async (data: AuthSigning) => {

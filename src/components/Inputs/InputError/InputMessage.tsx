@@ -2,14 +2,14 @@ import React from 'react';
 import './InputMessage.css'
 
 interface InputMessageProps {
-    message: string | undefined;
+    messages: (string | undefined)[];
     type: 'error' | 'warning' | 'info'
 }
 
-export const InputMessage: React.FC<InputMessageProps> = ({ message, type }) => {
+export const InputMessage: React.FC<InputMessageProps> = ({ messages, type }) => {
     return (
         <div className={`input__error ${type}`}>
-            <span>{message}</span>
+            <span>{messages.filter(ele =>Boolean(ele)).join(", ")}</span>
         </div>
     )
 }
