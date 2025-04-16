@@ -4,7 +4,7 @@ import { AuthFormComponent } from "../../components/Forms/AuthForm/AuthForm";
 import userIcon from '../../assets/usermen.png'
 import './AuthPage.css'
 
-export const AuthPage: React.FC = () => {
+const AuthPage: React.FC<any> = () => {
     return (
         <div className="auth__page">
             <FrameComponent
@@ -17,3 +17,5 @@ export const AuthPage: React.FC = () => {
         </div>
     )
 }
+
+export default AuthPage

@@ -1,0 +1,18 @@
+.container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &.right{
+        right: 30px;
+    }
+
+    &.left {
+        left: 30px;
+    }
+
+}

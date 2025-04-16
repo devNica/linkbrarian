@@ -1,0 +1,25 @@
+.main__layout {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.top__container {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main__container {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+ 
+   
+
+}
