@@ -1,5 +1,39 @@
 .home__page{
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
 
-    background-color: red;
+.add_category{
+    background-color: #343434;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 4px;
+    gap: 10px;
+
+    text-align: center;
+    font-size: 1.2rem;
+
+   
+
+    a {
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        transition: .4s all;
+        color: var(--bg-darkblue-300);
+        
+        &:hover{
+            transition: .4s all;
+            cursor: pointer;
+            color: var(--bg-darkblue-100);
+        }
+    }
 }
