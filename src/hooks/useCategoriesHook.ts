@@ -25,14 +25,14 @@ export function useFetchCategoriesHook() {
 
         if (isSuccess) {
             setCategories({
-                categories: data.meta,
+                categories: [...data.meta],
                 filled: data.meta.length > 0
             })
         } else if (isError) {
             // handle error
             console.log(error)
         }
-    }, [isSuccess])
+    }, [isSuccess, data])
 
 
     return {
