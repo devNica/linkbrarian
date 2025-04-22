@@ -1,0 +1,93 @@
+.notification {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    color: var(--bg-white-500);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--box-shadow);
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+
+    .content {
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    &.default {
+        background-color: var(--notification-default)
+    }
+
+    &.error {
+        background-color: var(--notification-error);
+    }
+
+    &.success {
+        color: var(--notification-default);
+        background-color: var(--notification-success);
+    }
+
+    &.info {
+        background-color: var(--notification-info);
+    }
+
+    &.warning {
+        color: var(--notification-default);
+        background-color: var(--notification-warning);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+}
+
+.notification__close {
+    background: none;
+    border: none;
+    color: var(--bg-white-500);
+    cursor: pointer;
+    font-size: 20px;
+    height: 100%;
+    border-radius: 4px;
+
+    &.default {
+        background-color: var(--notification-error);
+    }
+
+    &.error {
+        background-color: var(--notification-default);
+    }
+
+    &.success {
+        background-color: var(--bg-green-300);
+    }
+
+    &.info {
+        background-color: var(--bg-darkblue-200);
+    }
+
+    &.warning {
+        background-color: var(--bg-dark-400);
+    }
+
+}

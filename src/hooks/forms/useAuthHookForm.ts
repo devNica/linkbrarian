@@ -1,9 +1,10 @@
 import { useAuthStore } from "../../store/auth";
 import { useMutation } from '@tanstack/react-query'
-import { ApiErrorModel, ApiModel } from "../../types/api";
+import { ApiModel } from "../../types/api";
 import { UserLogged } from "../../types/auth";
 import { userAuthAPI } from "../../api/auth";
 import { useForm } from "react-hook-form";
+import { setNotification } from "../../store/notification";
 
 type AuthFormValues = {
     email: string
@@ -18,10 +19,14 @@ export function useAuthHookForm() {
 
     const authMutation = useMutation({
 
-        mutationFn: (data: AuthFormValues) => userAuthAPI(data),  
+        mutationFn: (data: AuthFormValues) => userAuthAPI(data),
         onSuccess: (response: ApiModel<UserLogged>) => loginSuccess(response.meta),
-        onError: (error: ApiErrorModel) => {
-            console.log(error)
+        onError: (error: string) => {
+            setNotification({
+                type: 'error',
+                message: error,
+                delay: 5000
+            })
         }
     })
 

@@ -4,7 +4,7 @@ import { ParagraphComponent } from "../../components/Paragraph/Paragraph"
 import './CategoryRegistrationPage.css'
 
 
-const CategoryRegistrationPageComponent: FC<any> = () => {
+const CategoryRegistrationPageComponent: FC = () => {
     return (
         <div className="category__registration__page">
 

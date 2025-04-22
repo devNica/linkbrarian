@@ -28,7 +28,7 @@ export const CategoryForm: FC = () => {
                         value: 3,
                         message: "El nombre debe tener al menos 3 caracteres"
                     }
-                    
+
                 })
                 }
 

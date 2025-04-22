@@ -69,6 +69,16 @@
   /*sizes container definition*/
   --top-container-height: 65px;
   --left-container-width: 200px;
+
+
+  /* notification colors*/
+  --notification-info: #5f7eef;
+  --notification-error: #f46575;
+  --notification-success: #77efbd;
+  --notification-warning: #ffb500;
+  --notification-default: #333;
+
+  --box-shadow: rgba(0, 0, 0, 0.2)
 }
 
 
@@ -79,7 +89,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -90,4 +101,3 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-

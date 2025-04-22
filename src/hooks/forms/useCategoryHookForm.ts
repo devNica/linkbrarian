@@ -2,8 +2,9 @@ import { useAuthStore } from "../../store/auth"
 import { useMutation } from "@tanstack/react-query"
 import { addCategoryAPI } from "../../api/categories"
 import { useForm } from "react-hook-form"
-import { ApiErrorModel, ApiModel } from "../../types/api"
+import { ApiModel } from "../../types/api"
 import { CategoryAPI } from "../../types/category-api"
+import { setNotification } from "../../store/notification"
 
 interface CategoryFormValues {
     categoryName: string
@@ -20,9 +21,19 @@ export default function useCategoryHookForm() {
             name: data.categoryName,
             userId: user?.userId!
         }),
-        onSuccess: (_response: ApiModel<CategoryAPI[]>) => { },
-        onError: (error: ApiErrorModel) => {
-            console.log(error)
+        onSuccess: (response: ApiModel<CategoryAPI[]>) => {
+            setNotification({
+                type: 'success',
+                message: response.message,
+                delay: 5000
+            })
+        },
+        onError: (error: string) => {
+            setNotification({
+                type: 'error',
+                message: error,
+                delay: 5000
+            })
         }
     })
 
