@@ -24,7 +24,7 @@ export const NavbarComponent: FC = () => {
                         </Link>
                     </li>
                     <li className="nav__item">
-                        <Link to={'/categories/register'} className="nav__link">
+                        <Link to={'/categories/add'} className="nav__link">
                             + Categories
                         </Link>
                     </li>

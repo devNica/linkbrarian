@@ -1,0 +1,18 @@
+.category__registration__page{
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
+    .form{
+        width: 90%;
+        max-width: 800px;
+        height: 220px;
+    }
+
+    .info{
+        width: 90%;
+        max-width: 800px;
+    }
+}

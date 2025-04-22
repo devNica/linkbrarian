@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { PublicRoute } from "./hoc/PublicRoute"
-import { LazyAuthPage, LazyHomePage } from "./LazyRoutes"
+import { LazyAuthPage, LazyCategoryRegistrationPage, LazyHomePage } from "./LazyRoutes"
 import { PrivateRoute } from "./hoc/PrivateRoute"
 import { MainLayoutComponent } from "../layouts/MainLayout"
 
@@ -12,6 +12,7 @@ export const AppRoutes = () => {
             <Route element={<PrivateRoute />}>
                 <Route element={<MainLayoutComponent />}>
                     <Route path="/home" element={<LazyHomePage />} />
+                    <Route path="/categories/add" element={<LazyCategoryRegistrationPage />} />
                 </Route>
             </Route>
 

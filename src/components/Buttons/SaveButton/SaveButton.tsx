@@ -3,6 +3,7 @@ import './SaveButton.css'
 
 interface SaveButtonProps {
     type: 'button' | 'submit'
+    theme?: 'info' | 'warning' | 'success' | 'alert' | 'dark'
     buttonTitle: string
     showIcon?: boolean
     showTitle?: boolean
@@ -12,6 +13,7 @@ interface SaveButtonProps {
 
 const SaveButton: React.FC<SaveButtonProps> = ({
     type = 'button',
+    theme = 'info',
     buttonTitle = 'Guadar',
     showIcon = true,
     showTitle = true,
@@ -21,7 +23,7 @@ const SaveButton: React.FC<SaveButtonProps> = ({
     return (
         <button
             type={type}
-            className="button"
+            className={`button ${theme}`}
             onClick={handleClick}
         >
             <div className="button__group">

@@ -1,14 +1,14 @@
 .button {
-    background-color: var(--bg-navy-200);
+
     border: 1px solid var(--bg-white-200);
     border-radius: 4px;
-    
+
     height: 35px;
     width: 40%;
 
     min-width: 100px;
     max-width: 130px;
-    
+
     margin: 0;
     padding: 0;
 
@@ -17,12 +17,84 @@
 
     font-family: 'Barlow Condensed', sans-serif;
 
-    &:hover {
-        background-color: var(--bg-darkblue-500);
-        cursor: pointer;
+
+
+    &.info {
+        background-color: var(--bg-navy-200);
+        transition: .6s ease all;
+
+        strong {
+            color: var(--bg-white-300);
+        }
+
+        &:hover {
+            transition: .6s ease all;
+            background-color: var(--bg-darkblue-500);
+            cursor: pointer;
+        }
     }
 
-  
+    &.success {
+        background-color: var(--bg-green-100);
+        transition: .6s ease all;
+
+        strong {
+            color: var(--bg-deepdark-300);
+        }
+
+        &:hover {
+            transition: .6s ease all;
+            background-color: var(--bg-green-500);
+            cursor: pointer;
+        }
+    }
+
+    &.alert {
+        background-color: var(--bg-red-100);
+        transition: .6s ease all;
+
+        strong {
+            color: var(--bg-white-300);
+        }
+
+        &:hover {
+            transition: .6s ease all;
+            background-color: var(--bg-red-500);
+            cursor: pointer;
+        }
+    }
+
+    &.warning {
+        background-color: var(--bg-golden-300);
+        transition: .6s ease all;
+
+        strong {
+            color: var(--bg-deepdark-500);
+        }
+
+        &:hover {
+            transition: .6s ease all;
+            background-color: var(--bg-golden-500);
+            cursor: pointer;
+        }
+    }
+
+    &.dark {
+        background-color: var(--bg-deepdark-200);
+        transition: .6s ease all;
+
+        strong {
+            color: var(--bg-white-300);
+        }
+
+        &:hover {
+            transition: .6s ease all;
+            background-color: var(--bg-deepdark-500);
+            cursor: pointer;
+        }
+    }
+
+
     .button__group {
         display: flex;
         flex-direction: row;
@@ -49,7 +121,6 @@
     }
 
     .button__title {
-        color: var(--bg-white-300);
         font-family: 'Barlow Condensed', sans-serif;
         font-size: 0.9rem;
         letter-spacing: 0.07rem;
