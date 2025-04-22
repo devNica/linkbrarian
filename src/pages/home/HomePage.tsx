@@ -22,7 +22,7 @@ const HomePageComponent: FC = () => {
             {
                 states.isLoading ? <h2>...cargando</h2> :
                     filled ?
-                        <CategoryExplorerComponent /> :
+                        <CategoryExplorerComponent isNavigable={true}/> :
                         <FirstTimeSectionComponent>
                             <div className="add_category">
                                 <Link to={'/categories/add'}>Agregar Categoria</Link>

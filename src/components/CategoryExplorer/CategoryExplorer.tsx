@@ -40,9 +40,9 @@ export const CategoryExplorerComponent: FC<CategoryExplorerProps> = ({
                     <Link to={`/categories/${category.categoryId}/links`}>
                         {category.name}
                     </Link> :
-                    <>
+                    <span>
                         {category.name}
-                    </>
+                    </span>
             }
         </div>
     ))
