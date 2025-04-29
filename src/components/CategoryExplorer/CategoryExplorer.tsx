@@ -1,9 +1,8 @@
 import { FC, useMemo, useState } from 'react'
 import { useCategoriesStore } from '../../store/categories'
-import { CategoryAPI } from '../../types/category-api'
+import { CategoryAPI } from '../../types/api'
 import { Link } from 'react-router-dom'
 import './CategoryExplorer.css'
-
 
 interface CategoryExplorerProps {
     title?: string

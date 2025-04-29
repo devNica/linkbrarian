@@ -1,0 +1,107 @@
+.categories__list {
+    border: 3px solid var(--bg-navy-100);
+    border-radius: 3px;
+    width: 30%;
+    height: max-content;
+
+    display: block;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+
+    .categories__list-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .add-link {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            padding: .4rem;
+            background-color: var(--bg-green-400);
+            border-radius: 4px;
+            transition: .3s ease all;
+
+            &>a {
+                color: #fff;
+                transition: .3s ease all;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transition: 0.3s ease all;
+                background-color: var(--bg-green-200);
+            }
+        }
+    }
+
+    .categories__list-content {
+        padding: 0;
+        list-style: none;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-rows: auto;
+        gap: 10px;
+
+        .category__item {
+            height: 55px;
+            display: flex;
+            border-radius: 4px;
+            position: relative;
+            border-left: 7px solid var(--bg-navy-100);
+            background-color: var(--bg-dark-400);
+            transition: .4s ease all;
+
+            .category__item-name {
+                position: absolute;
+                top: 4px;
+                left: 10px;
+                flex-wrap: wrap;
+                width: 75%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .category__item-size {
+                position: absolute;
+                top: 4px;
+                right: 5px;
+                background-color: var(--bg-dark-200);
+                height: 23px;
+                width: 23px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .categories__list-search {
+        display: flex;
+
+        &>input {
+            height: 40px;
+            width: 100%;
+            padding: 0.2rem;
+            margin-bottom: 10px;
+            border: 0.13rem solid var(--bg-darkblue-200);
+            border-radius: 3px;
+            outline: none;
+            box-sizing: border-box;
+            font-size: 1.2rem;
+            letter-spacing: 0.05rem;
+            background-color: #2b2a33;
+            color: var(--bg-dark-200);
+            text-align: center;
+        }
+    }
+}
